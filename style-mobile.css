@@ -10,6 +10,7 @@
         flex-direction: column;
         height: auto;
         transform: none !important;
+        overflow: auto;
     }
 
     .container > section{
