@@ -9,20 +9,52 @@
     <link rel="stylesheet" href="style-dekstop.css" media="screen and (min-width: 991px)">
 </head>
 <body>
-    <main class="container" data-0="transform:translateX(0%);" data-2000="transform:translateX(-400%);">
-        <section class="jumbotron">
-            <div class="content">
-                <h1>Section One</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus ipsam
-                    iusto vel! Accusamus sapiente odio repudiandae pariatur nostrum a praesentium, vitae sunt ipsa in voluptatem
-                    enim incidunt quae mollitia consectetur! Optio quibusdam veniam sequi pariatur eos sunt exercitationem
-                    voluptatum reprehenderit cupiditate animi saepe dicta iure asperiores facilis velit veritatis ipsum modi
-                    officiis, fugit sint non recusandae. Quis dolorem obcaecati porro repellat, earum vitae consequuntur ea ad rem
-                    voluptas asperiores? Illum ea debitis repellat accusantium magni tempore ex sunt asperiores, nam dicta modi
-                    nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
-            </div>
-        </section>
+    <nav>
+       <section>
+           <ul class="navbar">
+            <li class="navbar-item">home</li>
+            <li class="navbar-item">about</li>
+            <li class="navbar-item">skill</li>
+            <li class="navbar-item">blog</li>
+            <li class="navbar-item">project</li>
+            <li class="navbar-item">contact</li>
+            <hr class="navbar-line line-1">
+            <hr class="navbar-line line-2">
+            <hr class="navbar-line line-3">
+           </ul>
+       </section> 
+    </nav>
+    <nav>
         <section>
+            <ul class="socmed-link">
+                <a class="link-item fas fa-envelope fa-2x"></a>
+                <a class="link-item fab fa-discord fa-2x"></li>
+                <a class="link-item fab fa-github fa-2x"></a>
+                <a class="link-item fab fa-linkedin fa-2x"></a>
+                <div class="socmed-line"></div>
+            </ul>
+        </section>
+    </nav>
+
+
+    <main class="container" data-0="transform:translateX(0%);" data-2000="transform:translateX(-500%);">
+        <section class="home" id="home">
+            <button class="hire-btn">Hire me</button>
+            <div class="content home-content">
+                <div class="text-box-name">
+                    <h3 class="text-condement">HELLO, I'M</h3>
+                    <h2 class="text-main">Azzam Izzudin</h2>
+                </div>
+                <img src="./assets/4192021195428-removebg-preview.png" class="avatar">
+                <div class="text-box-job">
+                    <h3 class="text-condement">AND I'M A</h3>
+                    <h2 class="text-main">Front End</h2>
+                    <h2 class="text-main">Web Developer</h2>
+                </div>
+            </div>
+            <h1 class="text-portofolio">PORTOFOLIO</h1>
+        </section>
+        <section class="about" id="about">
             <div class="content">
                 <h1>Section Two</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus
@@ -36,7 +68,7 @@
                     nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
             </div>
         </section>
-        <section>
+        <section class="skill" id="skill">
             <div class="content">
                 <h1>Section Three</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus
@@ -50,7 +82,7 @@
                     nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
             </div>
         </section>
-        <section>
+        <section class="blog" id="blog">
             <div class="content">
                 <h1>Section Four</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus
@@ -64,7 +96,7 @@
                     nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
             </div>
         </section>
-        <section>
+        <section class="project" id="project">
             <div class="content">
                 <h1>Section Five</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus
@@ -78,8 +110,23 @@
                     nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
             </div>
         </section>
+        <section class="contact" id="contact">
+            <div class="content">
+                <h1>Section six</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic quam aliquam molestias fugiat vero delectus
+                    ipsam
+                    iusto vel! Accusamus sapiente odio repudiandae pariatur nostrum a praesentium, vitae sunt ipsa in voluptatem
+                    enim incidunt quae mollitia consectetur! Optio quibusdam veniam sequi pariatur eos sunt exercitationem
+                    voluptatum reprehenderit cupiditate animi saepe dicta iure asperiores facilis velit veritatis ipsum modi
+                    officiis, fugit sint non recusandae. Quis dolorem obcaecati porro repellat, earum vitae consequuntur ea ad
+                    rem
+                    voluptas asperiores? Illum ea debitis repellat accusantium magni tempore ex sunt asperiores, nam dicta modi
+                    nobis a deleniti repellendus possimus assumenda ullam neque quod ipsam quis.</p>
+            </div>
+        </section>
     </main>
 
+    <script src="https://kit.fontawesome.com/df0133b48d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="skrollr.js"></script>
     <script type="text/javascript">let s = skrollr.init();</script>
     <script src="script.js"></script>
