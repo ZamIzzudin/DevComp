@@ -1,0 +1,95 @@
+[
+    [
+        {
+            
+                "name": "HTML",
+                "rate": "Intermediate",
+                "class": "intermediate",
+                "img": "./assets/skill-data/language/html-logo.png"
+            
+            },{
+            
+                "name": "CSS",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/language/css-logo.png"
+            
+            },{
+            
+                "name": "JAVASCRIPT",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/language/js-logo.png"
+            
+            },{
+            
+                "name": "JAVA",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/language/java-logo.png"
+            
+            },{
+            
+                "name": "PYTON",
+                "rate": "BASIC",
+                "class": "basic",
+                "img": "./assets/skill-data/language/python-logo.png"
+            
+        }
+    ],
+    [
+        {
+            "name": "BOOTSTRAP",
+            "rate": "Basic",
+            "class": "basic",
+            "img": "./assets/skill-data/framework/bootstrap-logo.png"
+        },
+        {
+            "name": "MATERIALIZE",
+            "rate": "Basic",
+            "class": "basic",
+            "img": "./assets/skill-data/framework/materialize-logo.png"
+        }
+    ],
+    [
+        {
+            
+                "name": "FIGMA",
+                "rate": "Intermediate",
+                "class": "intermediate",
+                "img": "./assets/skill-data/design/figma-logo.png"
+            
+            }, 
+            {
+                "name": "ADOBE AI",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/design/ai-logo.jpg"
+            }
+            ,{
+        
+                "name": "PIXLR",
+                "rate": "Expert",
+                "class": "expert",
+                "img": "./assets/skill-data/design/pixlr-logo.png"
+            
+        }
+    ],
+    [
+        {
+            
+                "name": "GITHUB",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/vControl/github-logo.png"
+            
+            },{
+            
+                "name": "GIT",
+                "rate": "Basic",
+                "class": "basic",
+                "img": "./assets/skill-data/vControl/git-logo.png"
+            
+        }
+    ]
+]
