@@ -207,7 +207,7 @@ document.addEventListener("scroll", function () {
     }
 })
 
-skillViewport.addEventListener("scroll", function () {
+skillViewport.addEventListener("touchmove", function () {
     let scrollX = skillViewport.scrollLeft;
     let target = ""
 
