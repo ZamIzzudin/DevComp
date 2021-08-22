@@ -162,7 +162,7 @@ const skillContainer = getHTML(".skill-container")
 
 const skillDesc = getHTML(".skill-desc")
 
-burgerNavbar.addEventListener("click", function(){
+burgerNavbar.addEventListener("touchstart", function(){
     hiddenNavbar.forEach(x => {
         x.classList.toggle("unhide");
      })
