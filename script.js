@@ -28,14 +28,6 @@ function whiteNavbar(navbar, navbarLine) {
     })
 }
 
-function scrollAbout(layer) {
-    layer.forEach((e, i) => {
-        setTimeout(() => {
-            e.style.top = "100%";
-        }, 1000 * i);
-    })
-}
-
 function navScroll(direction,index){
     let target = ((direction.offsetLeft-(166 * index))/3)
     window.scroll({
@@ -142,10 +134,6 @@ const container = getHTML(".container");
 
 const skillbtn = getHTMLs(".skill-btn");
 
-const layerDesc = getHTMLs(".layer-desc");
-
-const aboutDesc = getHTMLs(".about-desc");
-
 const skillContainer = getHTML(".skill-data");
 
 const darkLayer = getHTML(".dark-layer")
@@ -203,17 +191,6 @@ document.addEventListener("click", function(e) {
     }
 })
 
-aboutDesc.forEach(e => {
-    e.addEventListener("mouseover", e =>{
-        const select = e.target.querySelector(".layer-desc")
-        if(select.style.top == "100%"){
-            select.style.top = "0%";
-            setTimeout(() => {
-                select.style.top = "100%";
-            }, 3000);
-        } 
-    })
-})
 
 navbar.forEach((e,i) => {
     e.addEventListener("click", function(ev){

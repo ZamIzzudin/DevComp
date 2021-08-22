@@ -12,15 +12,18 @@
     <nav>
        <section>
            <ul class="navbar">
-            <a class="navbar-item" href="#home">home</a>
-            <a class="navbar-item" href="#about">about</a>
-            <a class="navbar-item" href="#skill">skill</a>
-            <a class="navbar-item" href="#blog">blog</a>
-            <a class="navbar-item" href="#project">project</a>
-            <a class="navbar-item" href="#contact">contact</a>
-            <hr class="navbar-line line-1">
-            <hr class="navbar-line line-2">
-            <hr class="navbar-line line-3">
+            <hr class="navbar-line line-1 mobile">
+            <hr class="navbar-line line-2 mobile">
+            <hr class="navbar-line line-3 mobile">
+            <a class="navbar-item " href="#home">home</a>
+            <a class="navbar-item " href="#about">about</a>
+            <a class="navbar-item " href="#skill">skill</a>
+            <a class="navbar-item " href="#blog">blog</a>
+            <a class="navbar-item " href="#project">project</a>
+            <a class="navbar-item " href="#contact">contact</a>
+            <hr class="navbar-line line-1 dekstop">
+            <hr class="navbar-line line-2 dekstop">
+            <hr class="navbar-line line-3 dekstop">
            </ul>
        </section> 
     </nav>
@@ -45,7 +48,8 @@
                     <h3 class="text-condement">HELLO, I'M</h3>
                     <h2 class="text-main">Azzam Izzudin</h2>
                 </div>
-                <img src="./assets/4192021195428-removebg-preview.png" class="avatar">
+                <img src="./assets/4192021195428-removebg-preview.png" class="avatar dekstop">
+                <img src="./assets/mobile.png" class="avatar mobile">
                 <div class="text-box-job">
                     <h3 class="text-condement">AND I'M A</h3>
                     <h2 class="text-main">Front End</h2>
@@ -57,31 +61,25 @@
 
         <section class="about" id="about">
             <div class="content about-content">
-                <div class="about-desc">
-                    <div class="layer-desc"></div>
-                </div>
-                <div class="about-desc">
-                    <div class="layer-desc"></div>
-                </div>
-                <div class="title about-title">about</div>
-                <div class="about-desc">
-                    <div class="layer-desc"></div>
-                </div>
-                <div class="about-desc">
-                    <div class="layer-desc"></div>
-                </div>
+                <div class="title about-title">about</div>       
             </div>
         </section>
 
         <section class="skill" id="skill">
             <h2 class="title title-skill">Skill</h2>
-                <div class="dark-layer">
+                <div class="dark-layer dekstop">
                     <h4 class="click-me">click one</h4>
                     <img src="./assets/arrow.png" class="arrow1">
                     <img src="./assets/arrow2.png" class="arrow2">
                 </div>
             <div class="content skill-content">
                 <div class="skill-data">
+                    <div class="skill-viewport mobile">
+                        <div class="skill-container mobile">
+                        </div>
+                    </div>
+                    <div class="skill-desc mobile">
+                    </div>
                 </div>
             </div>
             <div class="button-group">
@@ -95,11 +93,6 @@
         <section class="blog" id="blog">
             <h2 class="title title-blog">blog</h2>
             <div class="content blog-content">
-                <div class="blog-thumb">
-                    <h3 class="blog-title">title</h3>
-                    <p class="blog-writer">written by</p>
-                    <span class="blog-date">date</span>
-                </div>
                 <div class="blog-thumb">
                     <h3 class="blog-title">title</h3>
                     <p class="blog-writer">written by</p>
@@ -201,6 +194,13 @@
     <script src="https://kit.fontawesome.com/df0133b48d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="skrollr.js"></script>
     <script type="text/javascript">let s = skrollr.init();</script>
-    <script src="script.js"></script>
+    <script>
+        if (screen && screen.width > 900) {
+                document.write('<script type="text/javascript" src = "script.js" ><\/script>');}
+    </script>
+    <script>
+        if (screen && screen.width < 900) {
+                document.write('<script type="text/javascript" src = "script-mobile.js" ><\/script>');}
+    </script>
 </body>
 </html>
