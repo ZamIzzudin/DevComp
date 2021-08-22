@@ -201,3 +201,4 @@ navbar.forEach((e,i) => {
     })
 })
 
+alert("ini dekstop")

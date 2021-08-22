@@ -255,3 +255,4 @@ skillbtn.forEach(e => {
 })
 
 
+alert("ini mobile")
