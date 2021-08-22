@@ -51,7 +51,6 @@
     .container > section{
         min-width: 95%;
         height: 100vh;
-        border: 1px solid white;
         padding: 20px;
         width: auto;
         position: relative;
@@ -100,31 +99,36 @@
         margin-top: 10px;
         color: var(--fontPrimary);
         text-decoration: none;
-        display: none;
-        transition: .5s;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    .navbar-item:nth-child(2){
+        margin-top: 40px;
     }
 
     .unhide{
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 
     .putar{
         transform: rotate(90deg);
     }
 
-    .navbar-item:nth-child(4){
-        margin-top: 40px;
-    }
-
     .navbar-line{
-        width: 50%;
+        width: 100%;
         height: 5px;
         background-color: var(--fontPrimary);
         display: block;
         margin-top: 7px;
         border: none;
         transition: .5s;
+    }
 
+    .line-box{
+        width: 50%;
     }
 
     .link-item{

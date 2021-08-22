@@ -144,7 +144,9 @@ function renderSkillDesc(response) {
 }
 
 
-const burgerNavbar = getHTMLs(".navbar-line");
+const burgerNavbar = getHTML(".line-box");
+
+const lineBurgerNavbar = getHTMLs(".navbar-line");
 
 const hiddenNavbar = getHTMLs(".navbar-item")
 
@@ -160,16 +162,16 @@ const skillContainer = getHTML(".skill-container")
 
 const skillDesc = getHTML(".skill-desc")
 
-burgerNavbar.forEach(e => {
-    e.addEventListener("click", function(){
-        hiddenNavbar.forEach(x => {
-            x.classList.toggle("unhide");
-        })
+burgerNavbar.addEventListener("click", function(){
+    hiddenNavbar.forEach(x => {
+        x.classList.toggle("unhide");
+     })
     
-        burgerNavbar.forEach(b => {
-            b.classList.toggle("putar");
-        })
+    lineBurgerNavbar.forEach(b => {
+        b.classList.toggle("putar");
     })
+
+    
 })
 
 hiddenNavbar.forEach(e => {
