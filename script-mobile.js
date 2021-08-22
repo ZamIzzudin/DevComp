@@ -98,9 +98,9 @@ function success(response, index) {
         skillContainer.style.opacity = "1"
     })
 
-    // defaultDesc = renderSkillDescDefault(rsp[index][0])
-    // skillDesc.innerHTML = defaultDesc
-    // skillDesc.style.opacity = "1"
+    defaultDesc = renderSkillDescDefault(rsp[index][0])
+    skillDesc.innerHTML = defaultDesc
+    skillDesc.style.opacity = "1"
 }
 
 function success2(response, target){
@@ -207,7 +207,7 @@ document.addEventListener("scroll", function () {
     }
 })
 
-skillViewport.addEventListener("touchmove", function () {
+skillViewport.addEventListener("scroll", function () {
     let scrollX = skillViewport.scrollLeft;
     let target = ""
 
@@ -225,25 +225,21 @@ skillViewport.addEventListener("touchmove", function () {
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
-        alert("bisa")
     } else if (scrollX === 379) {
         target = document.getElementById("2").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
-        alert("bisa")
     } else if (scrollX === 569) {
         target = document.getElementById("3").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
-        alert("bisa")
     } else if (scrollX === 759) {
         target = document.getElementById("4").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
-        alert("bisa")
     }
 })
 
@@ -255,6 +251,8 @@ skillbtn.forEach(e => {
         setTimeout(() => {
             getSkillData("./data.json", success, target)
         }, 100);
+        const kotak = getHTMLs(".kotak")
+        console.log(kotak)
     })
 })
 
