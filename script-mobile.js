@@ -19,7 +19,6 @@ function navScroll(elementDirection) {
 function darkNav(navbarItem,navbarLine,socmedLink,socmedLine) {
     navbarItem.forEach(e => {
         e.style.color = "#1B1C1E"
-        e.style.fontWeight = "bold"
     })
     
     navbarLine.forEach(e => {
@@ -145,8 +144,9 @@ function renderSkillDesc(response) {
 
 
 const burgerNavbar = getHTML(".line-box");
-
+console.log(burgerNavbar)
 const lineBurgerNavbar = getHTMLs(".navbar-line");
+console.log(lineBurgerNavbar)
 
 const hiddenNavbar = getHTMLs(".navbar-item")
 
@@ -189,21 +189,21 @@ document.addEventListener("scroll", function () {
     let area = screen.height - screen.height*2/3
     
     if(scrollY > area*1.5){
-        darkNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+        darkNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
         if(scrollY > area*4){
-            lightNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+            lightNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
             if(scrollY > area*7.5){
-                darkNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+                darkNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
                 if(scrollY > area*10){
-                    lightNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+                    lightNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
                     if(scrollY > area*13.5){
-                        darkNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+                        darkNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
                     }
                 }
             }
         }
     }else{
-        lightNav(hiddenNavbar, burgerNavbar, socmedLink, socmedLine)
+        lightNav(hiddenNavbar, lineBurgerNavbar, socmedLink, socmedLine)
     }
 })
 
@@ -254,5 +254,3 @@ skillbtn.forEach(e => {
     })
 })
 
-
-alert("ini mobile")
