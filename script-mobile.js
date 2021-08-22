@@ -98,9 +98,9 @@ function success(response, index) {
         skillContainer.style.opacity = "1"
     })
 
-    defaultDesc = renderSkillDescDefault(rsp[index][0])
-    skillDesc.innerHTML = defaultDesc
-    skillDesc.style.opacity = "1"
+    // defaultDesc = renderSkillDescDefault(rsp[index][0])
+    // skillDesc.innerHTML = defaultDesc
+    // skillDesc.style.opacity = "1"
 }
 
 function success2(response, target){
@@ -144,9 +144,9 @@ function renderSkillDesc(response) {
 
 
 const burgerNavbar = getHTML(".line-box");
-console.log(burgerNavbar)
+
 const lineBurgerNavbar = getHTMLs(".navbar-line");
-console.log(lineBurgerNavbar)
+
 
 const hiddenNavbar = getHTMLs(".navbar-item")
 
@@ -207,10 +207,10 @@ document.addEventListener("scroll", function () {
     }
 })
 
-skillViewport.addEventListener("scroll", function (ev) {
+skillViewport.addEventListener("scroll", function () {
     let scrollX = skillViewport.scrollLeft;
     let target = ""
-    
+
     console.log(scrollX)
 
     skillDesc.style.opacity = "0"
@@ -224,22 +224,26 @@ skillViewport.addEventListener("scroll", function (ev) {
         target = document.getElementById("1").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
-        }, 100);    
+        }, 100);
+        alert("bisa")
     } else if (scrollX === 379) {
         target = document.getElementById("2").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
+        alert("bisa")
     } else if (scrollX === 569) {
         target = document.getElementById("3").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
+        alert("bisa")
     } else if (scrollX === 759) {
         target = document.getElementById("4").dataset.skill
         setTimeout(() => {
             getSkillDataDesc("./data.json", success2, target)
         }, 100);
+        alert("bisa")
     }
 })
 
