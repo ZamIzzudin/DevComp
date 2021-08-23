@@ -669,7 +669,7 @@
     }
 
     .side:nth-child(1){
-        background-image: url("./assets/kotak3d/0.jpg");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725380/Portofolio/Assets/qube3D/0_pzo2qc.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -678,7 +678,7 @@
     }
 
     .side:nth-child(2){
-        background-image: url("./assets/kotak3d/1.jpg");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725380/Portofolio/Assets/qube3D/1_wdi6yu.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -687,7 +687,7 @@
     }
 
     .side:nth-child(3){
-        background-image: url("./assets/kotak3d/5.png");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725380/Portofolio/Assets/qube3D/5_uddfu7.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -696,7 +696,7 @@
     }
 
     .side:nth-child(4){
-        background-image: url("./assets/kotak3d/3.jpg");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725380/Portofolio/Assets/qube3D/3_pg8q7d.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -705,7 +705,7 @@
     }
 
     .side:nth-child(5){
-        background-image: url("./assets/kotak3d/4.jpg");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725380/Portofolio/Assets/qube3D/4_b43wjs.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -714,7 +714,7 @@
     }
 
     .side:nth-child(6){
-        background-image: url("./assets/kotak3d/2.jpg");
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725381/Portofolio/Assets/qube3D/2_ptlmb7.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

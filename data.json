@@ -5,35 +5,35 @@
                 "name": "HTML",
                 "rate": "Intermediate",
                 "class": "intermediate",
-                "img": "./assets/skill-data/language/html-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/language/html-logo_vg5p6u.png"
             
             },{
             
                 "name": "CSS",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/language/css-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/language/css-logo_elyoqh.png"
             
             },{
             
                 "name": "JAVASCRIPT",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/language/js-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/language/js-logo_fmwgkn.png"
             
             },{
             
                 "name": "JAVA",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/language/java-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725397/Portofolio/Assets/skillData/language/java-logo_lfena7.png"
             
             },{
             
                 "name": "PYTON",
                 "rate": "BASIC",
                 "class": "basic",
-                "img": "./assets/skill-data/language/python-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725397/Portofolio/Assets/skillData/language/python-logo_pr9oqm.png"
             
         }
     ],
@@ -42,13 +42,13 @@
             "name": "BOOTSTRAP",
             "rate": "Basic",
             "class": "basic",
-            "img": "./assets/skill-data/framework/bootstrap-logo.png"
+            "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/framework/bootstrap-logo_yifv1o.png"
         },
         {
             "name": "MATERIALIZE",
             "rate": "Basic",
             "class": "basic",
-            "img": "./assets/skill-data/framework/materialize-logo.png"
+            "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/framework/materialize-logo_gelgzd.png"
         }
     ],
     [
@@ -57,21 +57,21 @@
                 "name": "FIGMA",
                 "rate": "Intermediate",
                 "class": "intermediate",
-                "img": "./assets/skill-data/design/figma-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/design/figma-logo_oaqbyp.png"
             
             }, 
             {
                 "name": "ADOBE AI",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/design/ai-logo.jpg"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/design/ai-logo_talpfe.jpg"
             }
             ,{
         
                 "name": "PIXLR",
                 "rate": "Expert",
                 "class": "expert",
-                "img": "./assets/skill-data/design/pixlr-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725396/Portofolio/Assets/skillData/design/pixlr-logo_e0wijz.png"
             
         }
     ],
@@ -81,14 +81,14 @@
                 "name": "GITHUB",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/vControl/github-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725397/Portofolio/Assets/skillData/vControl/github-logo_jzppxi.png"
             
             },{
             
                 "name": "GIT",
                 "rate": "Basic",
                 "class": "basic",
-                "img": "./assets/skill-data/vControl/git-logo.png"
+                "img": "https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629725397/Portofolio/Assets/skillData/vControl/git-logo_ur79as.png"
             
         }
     ]
