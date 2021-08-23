@@ -8,7 +8,7 @@ function getHTMLs(html) {
     return document.querySelectorAll(html);
 }
 
-function blackNavbar(navbar,navbarLine) {
+function blackNavbar(navbar,navbarLine,socmedLink,socmedLine) {
     navbar.forEach(e => {
         e.style.color = "#1B1C1E"
     })
@@ -16,9 +16,15 @@ function blackNavbar(navbar,navbarLine) {
     navbarLine.forEach(e => {
         e.style.backgroundColor = "#1B1C1E"
     })
+
+    socmedLink.forEach(e => {
+        e.style.color = "#1B1C1E"
+    })
+
+    socmedLine.style.backgroundColor = "#1B1C1E"
 }
 
-function whiteNavbar(navbar, navbarLine) {
+function whiteNavbar(navbar,navbarLine,socmedLink,socmedLine) {
     navbar.forEach(e => {
         e.style.color = "white"
     })
@@ -26,6 +32,12 @@ function whiteNavbar(navbar, navbarLine) {
     navbarLine.forEach(e => {
         e.style.backgroundColor = "white"
     })
+
+    socmedLink.forEach(e => {
+        e.style.color = "white"
+    })
+
+    socmedLine.style.backgroundColor = "white"
 }
 
 function navScroll(direction,index){
@@ -126,6 +138,10 @@ function renderSkillDesc(e){
 
 // get element
 
+const socmedLine = getHTML(".socmed-line");
+
+const socmedLink = getHTMLs(".link-item")
+
 const navbar = getHTMLs(".navbar-item");
 
 const navbarLine = getHTMLs(".navbar-line")
@@ -138,26 +154,30 @@ const skillContainer = getHTML(".skill-data");
 
 const darkLayer = getHTML(".dark-layer")
 
+const label = getHTMLs(".form-grouped label")
+
 
 // event listener
 
 document.addEventListener("scroll", function(){
     let scrollY = window.pageYOffset;
 
-    if(scrollY > 900){
-        blackNavbar(navbar,navbarLine);
-        if(scrollY > 1350 ){
-            whiteNavbar(navbar, navbarLine);
-            if(scrollY > 1900){
-                blackNavbar(navbar, navbarLine)
-            }
+    if(scrollY > 250){
+        blackNavbar(navbar,navbarLine,socmedLink,socmedLine);
+        if(scrollY > 600){
+            whiteNavbar(navbar, navbarLine, socmedLink, socmedLine);
+           if(scrollY > 1000){
+               blackNavbar(navbar, navbarLine, socmedLink, socmedLine);
+                if(scrollY > 1450 ){
+                    whiteNavbar(navbar, navbarLine, socmedLink, socmedLine);
+                    if(scrollY > 1900){
+                        blackNavbar(navbar, navbarLine, socmedLink, socmedLine);
+                    }
+                }
+            } 
         }
     }else{
-        whiteNavbar(navbar,navbarLine);
-    }
-
-    if (scrollY < 300) {
-        scrollAbout(layerDesc)
+        whiteNavbar(navbar, navbarLine, socmedLink, socmedLine);
     }
 
     if (scrollY > 750){
@@ -201,4 +221,11 @@ navbar.forEach((e,i) => {
     })
 })
 
-alert("ini dekstop")
+
+label.forEach(e => {
+    e.innerHTML = e.innerHTML
+    .split('')
+    .map((latter,index) => `<span style = "transition-delay: ${index *30}ms">${latter}</span>`).join("")
+})
+
+console.log(label)

@@ -32,10 +32,10 @@
     <nav>
         <section>
             <ul class="socmed-link">
-                <a class="link-item fas fa-envelope fa-lg"></a>
-                <a class="link-item fab fa-discord fa-lg"></li>
-                <a class="link-item fab fa-github fa-lg"></a>
-                <a class="link-item fab fa-linkedin fa-lg"></a>
+                <a class="link-item fas fa-envelope fa-lg" href="mailto:azzamizzudinhasan@gmail.com" target="_blank"></a>
+                <a class="link-item fab fa-discord fa-lg" href="https://discordapp.com/users/533661901977026580" target="_blank"></li>
+                <a class="link-item fab fa-github fa-lg" href="https://github.com/ZamIzzudin" target="_blank"></a>
+                <a class="link-item fab fa-linkedin fa-lg" href="https://www.linkedin.com/in/azzam-izzudin-084294219/" target="_blank"></a>
                 <div class="socmed-line"></div>
             </ul>
         </section>
@@ -44,7 +44,13 @@
 
     <main class="container" data-0="transform:translateX(0%);" data-2000="transform:translateX(-500%);">
         <section class="home" id="home">
-            <button class="hire-btn">Hire me</button>
+            <button class="hire-btn mobile">
+                Hire me
+            </button>
+            <button class="hire-btn dekstop">
+                <span>Hire me</span>
+                <span>Hire me</span>
+            </button>
             <div class="content home-content">
                 <div class="text-box-name">
                     <h3 class="text-condement">HELLO, I'M</h3>
@@ -63,7 +69,17 @@
 
         <section class="about" id="about">
             <div class="content about-content">
-                <div class="title about-title">about</div>       
+                <div class="title about-title">about</div>
+                <img src="./assets/dummy-avatar.jpg" class="mini-avatar">
+                <div class="about-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam hic cupiditate, consequatur quas
+                    voluptatem officiis soluta quo! Omnis, illo maiores animi est possimus esse earum! Quos ut perferendis explicabo error.
+                    Incidunt consequuntur neque voluptatum illum. Asperiores sapiente maxime recusandae vel amet suscipit, distinctio
+                    aperiam, earum magni debitis ipsum laborum beatae cupiditate quia inventore possimus alias quod, aspernatur ut corporis
+                    provident? Facere porro consectetur earum provident aspernatur. Aliquid quos nam repudiandae deserunt quasi iusto a
+                    sapiente facilis quia ipsa expedita ducimus, debitis laborum doloribus corporis esse ipsum culpa placeat sit temporibus.
+                    Quam ad porro ea et ipsa libero id modi.
+                </div>       
             </div>
         </section>
 
@@ -181,12 +197,29 @@
         <section class="contact" id="contact">
             <div class="modern-carousel">
                 <h3 class="title contact-title">contact</h3>
+                <div class="wrapper">
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                    <div class="side"></div>
+                </div>
             </div>
             <div class="content contact-content">
                 <form action="" class="form-group">
-                    <input type="email" class="input-form" placeholder="email">
-                    <input type="text" class="input-form" placeholder="subject">
-                    <textarea name="" id="" cols="30" rows="10" class="input-form" placeholder="what you wanna say"></textarea>
+                    <div class="form-grouped">
+                       <input type="email" class="input-form">
+                        <label for="">Email</label> 
+                    </div>
+                    <div class="form-grouped">
+                        <input type="text" class="input-form">
+                        <label for="">Subject</label>   
+                    </div>
+                    <div class="form-grouped">
+                        <textarea name="" id="" cols="30" rows="10" class="input-form"></textarea>
+                        <label for="">Anything?</label>    
+                    </div>
                     <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>

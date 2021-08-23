@@ -72,7 +72,7 @@ nav:nth-child(1){
     position: relative;
     letter-spacing: 2px;
     transition: .3s;
-    font-size: .9em;
+    font-size: 1em;
     text-decoration: none;
     color: var(--fontPrimary);
 }
@@ -118,6 +118,9 @@ nav:nth-child(2){
     display:block !important; 
     margin-bottom: 30px;
     text-align: center;
+    color: var(--fontPrimary);
+    text-decoration: none;
+    font-size: 1.4em !important;
 }
 
 .link-item:last-child{
@@ -132,25 +135,25 @@ nav:nth-child(2){
 }
 
 .link-item:first-child:hover{
-    color: dodgerblue;
+    color: dodgerblue !important;
     transform: rotate(360deg);
     transition: transform .7s;
 }
 
 .link-item:nth-child(2):hover{
-    color: #7289da;
+    color: #7289da !important;
     transform: rotate(360deg);
     transition: transform .7s;
 }
 
 .link-item:nth-child(3):hover{
-    color: var(--third);
+    color: var(--third) !important;
     transform: rotate(360deg);
     transition: transform .7s;
 }
 
 .link-item:nth-child(4):hover{
-    color: #00a0dc;
+    color: #00a0dc !important;
     transform: rotate(360deg);
     transition: transform .7s;
 }
@@ -185,6 +188,10 @@ nav:nth-child(2){
     position: relative;
 }
 
+.home-content{
+    margin-top: -2% !important;
+}
+
 .title{
     font-family: var(--bebasnue);
     color: var(--fontPrimary);
@@ -201,24 +208,48 @@ nav:nth-child(2){
 }
 
 .hire-btn{
-    background-color: var(--purple);
-    padding: 13px;
-    font-family: var(--montserrat);
-    color: var(--fontSecondary);
     font-weight: 600;
     font-size: .9em;
-    position: absolute;
+    position: relative;
+    width: 110px;
+    height: 50px;
     top: 3%;
     left: 3%;
     border-radius: 5%;
     border: 2px solid var(--purple);
     letter-spacing: 1px;
     transition: .3s;
+    text-transform: uppercase;
 }
 
-.hire-btn:hover{
+.hire-btn span{
+    display: flex;
     background-color: var(--primary);
     color: var(--purple);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.hire-btn span:nth-child(2){
+    color: var(--fontSecondary);
+    background-color: var(--purple);
+    overflow: hidden;
+    z-index: 2;
+    transition: .2s;
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
+}
+
+.hire-btn span:nth-child(2):hover{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+
+.hire-btn span:nth-child(1):hover ~ span:nth-child(2){
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
 }
 
 .avatar{
@@ -314,46 +345,29 @@ nav:nth-child(2){
 .container > section > .about-content{
     max-width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-areas: "desc1 desc2 title desc3 desc4";
-    grid-template-columns: repeat (20vw);
-}
-
-.about-desc:first-child{
-    grid-area: desc1;
-    background-color: violet;
-}
-
-.about-desc:nth-child(2){
-    grid-area: desc2;
-    background-color: var(--blue);
-}
-
-.about-desc:nth-child(4){
-    grid-area: desc3;
-    background-color: skyblue;
-}
-
-.about-desc:nth-child(5){
-    grid-area: desc4;
-    background-color: var(--green);
 }
 
 .about-title{
-    margin: 0;
-    transform: rotate(0deg) translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
     color: var(--fontSecondary);
 }
 
-.layer-desc{
+.about-desc{
+    color: var(--fontSecondary);
+    width: 40%;
     position: absolute;
-    width: 20vw;
-    height: 100vh;
-    top: 0%;
-    background-color: black;
-    transition: 2s;
+    right: 7%;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: justify;
+}
+
+.mini-avatar{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 
@@ -565,7 +579,7 @@ nav:nth-child(2){
 }
 
 .blog-content{
-    padding-top: 14vh;
+    padding-top: 20vh;
 }
 
 .blog-thumb{
@@ -622,7 +636,7 @@ nav:nth-child(2){
 
 
 .project-title{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .project-content{
@@ -695,9 +709,118 @@ nav:nth-child(2){
 
 
 
+.contact{
+    display: flex;
+}
+
+.modern-carousel{
+    height: 100%;
+    width: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 580px;
+    transition: all .5s;
+    transform: translateX(10%);
+}
+
+.modern-carousel:hover{
+    perspective: 1500px;
+}
+
+.wrapper{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: all 10s;
+    transform: rotateZ(0) rotateX(0) rotateY(0);
+    transform-style: preserve-3d;
+}
+
+.wrapper:hover{
+    transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+}
+
+.side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all .5s;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side:nth-child(1){
+    background-image: url("./assets/kotak3d/0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: center left;
+    transform: rotateY(90deg) translateX(-100px);
+}
+
+.side:nth-child(2){
+    background-image: url("./assets/kotak3d/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center right;
+    transform: rotateY(90deg) translateX(100px);
+}
+
+.side:nth-child(3){
+    background-image: url("./assets/kotak3d/5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center top;
+    transform: rotateX(-90deg) translateY(-100px);
+}
+
+.side:nth-child(4){
+    background-image: url("./assets/kotak3d/3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center bottom;
+    transform: rotateX(90deg) translateY(100px);
+}
+
+.side:nth-child(5){
+    background-image: url("./assets/kotak3d/4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center right;
+    transform: translateZ(-100px);
+}
+
+.side:nth-child(6){
+    background-image: url("./assets/kotak3d/2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: center bottom;
+    transform:translateZ(100px);
+}
+
+.contact-title{
+    transform: rotate(0deg);
+    color: var(--fontSecondary);
+    margin: 0;
+    width: max-content;
+    position: absolute;
+    top: 15%;
+}
 
 .contact-content{
-    padding-top: 25vh;
+    padding-top: 10vh;
+    transform: translateX(-10%);
 }
 
 .form-group{
@@ -716,6 +839,7 @@ nav:nth-child(2){
     padding: 10px;
     font-family: var(--montserrat);
     max-width: 500px;
+    width: 90%;
 }
 
 .input-form:focus{
@@ -733,11 +857,33 @@ nav:nth-child(2){
     border-radius: 5px;
 }
 
+.form-grouped{
+    position: relative;
+    margin-bottom: 10px;
+}
 
-.modern-carousel{
-    height: 100%;
-    width: 40%;
+.form-grouped label{
     position: absolute;
+    color: var(--fontSecondary);
+    top: 10px;
+    left: 10px;
+    font-family: var(--montserrat);
+    font-size: .9em;
+}
+
+.form-grouped label span{
+    display: inline-block;
+    font-size: .9em;
+    transition: .3s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-grouped input:focus+label span{
+    transform: translateY(-30px);
+}
+
+.form-grouped textarea:focus+label span{
+    transform: translateY(-30px);
 }
 
 @keyframes tirai{
