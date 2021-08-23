@@ -619,6 +619,8 @@ nav:nth-child(2){
     padding: 10px;
     color: var(--fontSecondary);
     font-family: var(--montserrat);
+    display: block;
+    text-decoration: none;
 }
 
 .blog-thumb::after{

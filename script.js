@@ -227,5 +227,3 @@ label.forEach(e => {
     .split('')
     .map((latter,index) => `<span style = "transition-delay: ${index *30}ms">${latter}</span>`).join("")
 })
-
-console.log(label)

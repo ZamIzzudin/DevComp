@@ -68,78 +68,27 @@ function getSkillData(url, success, index) {
     dataSkill.send();
 }
 
-function getSkillDataDesc(url, success2, target) {
-    let dataSkill = new XMLHttpRequest();
-
-    dataSkill.onreadystatechange = () => {
-
-        if (dataSkill.readyState === 4) {
-            if (dataSkill.status === 200) {
-                success2(dataSkill.response, target);
-            } else if (dataSkill.status === 404) {
-                alert("can't found data skill");
-            }
-        }
-    }
-
-    dataSkill.open("get", url);
-    dataSkill.send();
-}
-
 function success(response, index) {
     let rsp = JSON.parse(response)
 
     let temporary = ""
-    let defaultDesc = ""
 
     rsp[index].forEach((e,i) => {
         temporary += renderSkill(e,i)
         skillContainer.innerHTML = temporary
         skillContainer.style.opacity = "1"
     })
-
-    defaultDesc = renderSkillDescDefault(rsp[index][0])
-    skillDesc.innerHTML = defaultDesc
-    skillDesc.style.opacity = "1"
 }
-
-function success2(response, target){
-    let rsp = JSON.parse(response)
-
-    let temporary = ""
-
-    rsp.forEach(e => {
-        e.forEach(x => {
-            if(x.name === target){
-                temporary = renderSkillDesc(x)
-                skillDesc.innerHTML = temporary
-                skillDesc.style.opacity = "1";
-            }
-        })
-    })
-}
-
-function renderSkillDescDefault(response) {
-    return `
-            <h3 class="data-skill-name">${response.name}</h3>
-            <h4 class="data-rate">${response.rate}</h4>
-            <div class="data-rate-graph ${response.class}"></div>
-            `
-}
-
 
 function renderSkill(response,index){
     return `<div class="kotak" >
                 <img src="${response.img}" id="${index}" data-skill="${response.name}">
+                <div class="skill-desc">
+                    <h3 class="data-skill-name">${response.name}</h3>
+                    <h4 class="data-rate">${response.rate}</h4>
+                    <div class="data-rate-graph ${response.class}"></div>
+                </div>
             </div>`
-}
-
-function renderSkillDesc(response) {
-    return `
-                <h3 class="data-skill-name">${response.name}</h3>
-                <h4 class="data-rate">${response.rate}</h4>
-                <div class="data-rate-graph ${response.class}"></div>
-            `
 }
 
 
@@ -147,10 +96,9 @@ const burgerNavbar = getHTML(".line-box");
 
 const lineBurgerNavbar = getHTMLs(".navbar-line");
 
-
 const hiddenNavbar = getHTMLs(".navbar-item")
 
-const socmedLink =  getHTMLs(".socmed-link")
+const socmedLink =  getHTMLs(".link-item")
 
 const socmedLine = getHTML(".socmed-line")
 
@@ -161,6 +109,11 @@ const skillbtn = getHTMLs(".skill-btn")
 const skillContainer = getHTML(".skill-container")
 
 const skillDesc = getHTML(".skill-desc")
+
+const label = getHTMLs(".form-grouped label")
+
+const hireBtn = getHTML(".hire-btn")
+
 
 burgerNavbar.addEventListener("touchstart", function(){
     hiddenNavbar.forEach(x => {
@@ -207,52 +160,28 @@ document.addEventListener("scroll", function () {
     }
 })
 
-skillViewport.addEventListener("scroll", function () {
-    let scrollX = skillViewport.scrollLeft;
-    let target = ""
-
-    console.log(scrollX)
-
-    skillDesc.style.opacity = "0"
-
-    if(scrollX === 0){
-        target = document.getElementById("0").dataset.skill
-        setTimeout(() => {
-            getSkillDataDesc("./data.json", success2, target)
-        }, 100);
-    }else if(scrollX === 189){
-        target = document.getElementById("1").dataset.skill
-        setTimeout(() => {
-            getSkillDataDesc("./data.json", success2, target)
-        }, 100);
-    } else if (scrollX === 379) {
-        target = document.getElementById("2").dataset.skill
-        setTimeout(() => {
-            getSkillDataDesc("./data.json", success2, target)
-        }, 100);
-    } else if (scrollX === 569) {
-        target = document.getElementById("3").dataset.skill
-        setTimeout(() => {
-            getSkillDataDesc("./data.json", success2, target)
-        }, 100);
-    } else if (scrollX === 759) {
-        target = document.getElementById("4").dataset.skill
-        setTimeout(() => {
-            getSkillDataDesc("./data.json", success2, target)
-        }, 100);
-    }
-})
-
 skillbtn.forEach(e => {
     e.addEventListener("click", function(){
         let target = e.dataset.idbtn
-        skillContainer.style.opacity = "0"
-        skillDesc.style.opacity = "0"
+
         setTimeout(() => {
             getSkillData("./data.json", success, target)
         }, 100);
-        const kotak = getHTMLs(".kotak")
-        console.log(kotak)
     })
 })
 
+label.forEach(e => {
+    e.innerHTML = e.innerHTML
+        .split('')
+        .map((latter, index) => `<span style = "transition-delay: ${index * 30}ms">${latter}</span>`).join("")
+})
+
+hireBtn.addEventListener("click", function () {
+    const target = document.getElementById("contact").offsetTop
+
+    window.scroll({
+        behavior: "smooth",
+        left: 0,
+        top: target
+    })
+})

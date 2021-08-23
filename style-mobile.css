@@ -135,6 +135,8 @@
         display: block;
         font-size: 1.4em !important;
         margin-bottom: 20px;
+        color: var(--fontPrimary);
+        text-decoration: none;
     }
 
     .socmed-link{
@@ -180,6 +182,14 @@
         color: var(--fontSecondary);
         border-radius: 5px;
         font-weight: bold;
+        transition: .5s;
+        box-sizing: border-box;
+    }
+
+    .hire-btn:hover, .hire-btn:active{
+        background-color: var(--primary);
+        color: var(--purple);
+        border: 2px solid var(--purple);
     }
 
     .avatar{
@@ -274,18 +284,33 @@
     }
 
     .about-content{
-        height: 98%;
-
+        height: 80%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
     }
 
     .about-title{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        color: var(--fontSecondary);
     }
 
-    
+    .mini-avatar{
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .about-desc{
+        text-align: justify;
+        font-family: var(--montserrat);
+        font-size: .8em;
+        margin-top: 20%;
+    }
+
+
+
 
     
     .skill-content{
@@ -311,92 +336,95 @@
         border: none;
         background-color: var(--secondary);
         color: var(--fontSecondary);
+        position: relative;
+        transition: .4s;
     }
+
+    .skill-btn:hover , .skill-btn:active{
+        background-color: var(--blue);
+        color: var(--fontPrimary);
+    }
+
 
     .skill-data{
-        width: 100%;
+        width: 75vw;
         height: 100%;
-        margin-top: 50px;
-    }
-
-    .skill-viewport{
-        width: 185px;
-        height: 60%;
-        overflow-x: scroll;
-        border: 1px solid transparent;
         margin: auto;
+        overflow-x: scroll;
         scroll-snap-type: x mandatory;
     }
+    
 
     .skill-container{
+        width: max-content;
         height: 100%;
         display: flex;
-        width: min-content;
-        transition: 0.3s;
-        opacity: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .skill-container > .kotak{
-        width: 180px;
-        height: 180px;
-        border: 1px solid transparent;
-        margin-right: 10px;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
+    .kotak{
+       width: 75vw;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       scroll-snap-align: center;
+       scroll-snap-stop: normal;
     }
 
     .skill-desc{
-        height: 30%;
-        width: inherit;
+        width: 100%;
+        height: 45%;
         text-align: center;
-        padding: 10px;
-        transition: .2s;
-        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .data-skill-name{
-        color: var(--fontPrimary);
         font-family: var(--bebasnue);
-        font-size: 1.7em;
+        color: var(--fontPrimary);
+        letter-spacing: 2px;
+        font-size: 2.3em;
         font-weight: normal;
-        letter-spacing: 3px;
     }
 
     .data-rate{
-        color: var(--fontPrimary);
         font-family: var(--montserrat);
-        letter-spacing: 3px;
+        color: var(--fontPrimary);
+        letter-spacing: 2px;
         font-weight: normal;
     }
 
     .data-rate-graph{
-        height: 8px;
-        width: inherit;
-        margin: 20px 0 0 10%;
-        border-radius: 10px;
+        margin-top: 25px;
+        width: 80%;
+        height: 10px;
+        border-radius: 50px;
     }
 
     .basic{
-        width: 40%;
         background-color: var(--green);
+        width: 40%;
     }
 
     .intermediate{
-        width: 60%;
         background-color: var(--blue);
+        width: 60%;
     }
 
     .expert{
-        width: 80%;
         background-color: var(--red);
+        width: 80%;
     }
 
     .kotak > img{
-        width: inherit;
-        height: inherit;
+        width: 150px;
+        height: 150px;
     }
-
-
 
 
 
@@ -418,6 +446,12 @@
         margin-bottom: 20px;
         height: 15vh;
         padding: 15px;
+        display: block;
+        text-decoration: none;
+    }
+
+    .blog-thumb:hover, .blog-thumb:active{
+        background-color: var(--blue);
     }
 
     .blog-title{
@@ -502,13 +536,21 @@
 
     .contact{
         background-color: var(--secondary);
+        display: flex;
+        flex-direction: column;
     }
     .contact-content{
-        padding-left: 40px;
+        padding-left: 60px;
+        display: flex;
+        align-items: center;
     }
 
     .contact-title{
         color: var(--fontSecondary);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-20%);
     }
 
     .form-group{
@@ -526,6 +568,11 @@
         padding: 10px;
         font-size: .9em;
         border-radius: 3px;
+        width: 100%;
+    }
+
+    .input-form:focus{
+        outline: none;
     }
 
     .submit-btn{
@@ -537,4 +584,137 @@
         background-color: var(--blue);
         border-radius: 5px;
         color: var(--fontPrimary);
+    }
+
+    .form-grouped{
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .form-grouped label{
+        position: absolute;
+        color: var(--fontSecondary);
+        top: 10px;
+        left: 10px;
+        font-family: var(--montserrat);
+        font-size: .9em;
+    }
+
+    .form-grouped label span{
+        display: inline-block;
+        font-size: .9em;
+        transition: .3s
+        cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .form-grouped input:focus+label span{
+        transform: translateY(-35px);
+    }
+
+    .form-grouped textarea:focus+label span{
+        transform: translateY(-35px);
+    }
+
+    .modern-carousel{
+        height: 100%;
+        width: 80%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 580px;
+        transition: all .5s;
+        transform: translateX(10%);
+        animation: bigger;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes bigger{
+        to{perspective: 1500px;}
+    }
+
+    .wrapper{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transition: all 10s;
+        transform: rotateZ(0) rotateX(0) rotateY(0);
+        transform-style: preserve-3d;
+        animation: putar;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        animation-direction: alternate;
+    }
+
+    @keyframes putar{
+        to{transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);}
+    }
+
+    .side{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: all .5s;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .side:nth-child(1){
+        background-image: url("./assets/kotak3d/0.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform-origin: center left;
+        transform: rotateY(90deg) translateX(-75px);
+    }
+
+    .side:nth-child(2){
+        background-image: url("./assets/kotak3d/1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform-origin: center right;
+        transform: rotateY(90deg) translateX(75px);
+    }
+
+    .side:nth-child(3){
+        background-image: url("./assets/kotak3d/5.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform-origin: center top;
+        transform: rotateX(-90deg) translateY(-75px);
+    }
+
+    .side:nth-child(4){
+        background-image: url("./assets/kotak3d/3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform-origin: center bottom;
+        transform: rotateX(90deg) translateY(75px);
+    }
+
+    .side:nth-child(5){
+        background-image: url("./assets/kotak3d/4.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform-origin: center right;
+        transform: translateZ(-75px);
+    }
+
+    .side:nth-child(6){
+        background-image: url("./assets/kotak3d/2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform-origin: center bottom;
+        transform:translateZ(75px);
     }
