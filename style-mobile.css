@@ -194,10 +194,10 @@
 
     .avatar{
         max-width: 600px;
-        width: 160% ;
+        width: 140% ;
         position: absolute;
         bottom: 0;
-        filter: contrast(100%) brightness(40%) saturate(80%) hue-rotate(30deg);
+        filter: contrast(100%) brightness(30%) saturate(30%) hue-rotate(40deg);
         left: 50%;
         transform: translateX(-50%);
     }
@@ -297,9 +297,12 @@
     }
 
     .mini-avatar{
+        background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629732108/Portofolio/Assets/about_obwl9n.jpg");
+        background-position: center;
+        background-size: cover;
         width: 200px;
-        height: auto;
-        border-radius: 50%;
+        height: 200px;
+        border-radius: 50%; 
     }
 
     .about-desc{

@@ -268,7 +268,7 @@ nav:nth-child(2){
     margin: auto;
     width: 85%;
     height: auto;
-    filter: contrast(100%) brightness(40%) saturate(80%) hue-rotate(30deg);
+    filter: contrast(100%) brightness(30%) saturate(30%) hue-rotate(40deg);
     position: absolute;
     bottom: 0;
     right: 5%;
@@ -382,12 +382,33 @@ nav:nth-child(2){
 }
 
 .mini-avatar{
-    width: 200px;
-    height: 200px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
     position: absolute;
-    left: 18%;
+    left: 15%;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -55%);
+    z-index: 10;
+    border: 5px solid var(--primary);
+}
+
+.mini-avatar::before{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    content: "";
+    background-image: url("https://res.cloudinary.com/udean/image/upload/w_auto,q_auto,f_auto/v1629732108/Portofolio/Assets/about_obwl9n.jpg");
+    background-position: center;
+    background-size: cover;
+    top: -2%;
+    left: -2%;
+    display: block;
+    transition: .5s;
+}
+
+.mini-avatar:hover::before{
+    transform: translate(-5%,-5%);
 }
 
 

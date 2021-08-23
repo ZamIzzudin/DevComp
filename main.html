@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        .dark-layer{
+        .kotak{
+            width: 300px;
+            height: 300px;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0,0,0,.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: skyblue;
+            z-index: 0;
         }
 
-        h2{
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
+        .kotak::after{
+            content: "";
+            background-color: salmon;
+            width: inherit;
+            height: inherit;
             position: absolute;
-            top: 20%;
-            right: 25%;
+            top: 10%;
+            left: 10%;
+            z-index: -10;
         }
     </style>
 </head>
 <body>
     
-    <div class="dark-layer">
-        <h4>click one</h4>
-    </div>
+    <div class="kotak"></div>
 
 </body>
 </html>
