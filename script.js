@@ -40,14 +40,41 @@ function whiteNavbar(navbar,navbarLine,socmedLink,socmedLine) {
     socmedLine.style.backgroundColor = "white"
 }
 
-function navScroll(direction,index){
-    let target = ((direction.offsetLeft-(166 * index))/3)
+// function navScroll(direction,index){
+//     let target = ((direction.offsetLeft-(166 * index))/3)
+//     window.scroll({
+//         behavior: 'smooth',
+//         left: 0,
+//         top: target
+//     });
+// }
+
+
+function navScroll(direction, index) {
+
+    let containerWidth = getComputedStyle(container).width
+    let a = [...containerWidth]
+    a.pop()
+    a.pop()
+    let width = "";
+    a.forEach(e => {
+        width += e
+    })
+
+    let target = ""
+    if (width * 1 < 1400) {
+        target = 400 * index
+    } else {
+        target = 600 * index
+    }
+
     window.scroll({
         behavior: 'smooth',
         left: 0,
         top: target
     });
 }
+
 
 function getSkillData(url,success,id){
     let dataSkill = new XMLHttpRequest();
