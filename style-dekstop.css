@@ -871,6 +871,7 @@ nav:nth-child(2){
     font-family: var(--montserrat);
     max-width: 500px;
     width: 90%;
+    z-index: 1;
 }
 
 .input-form:focus{
@@ -900,6 +901,7 @@ nav:nth-child(2){
     left: 10px;
     font-family: var(--montserrat);
     font-size: .9em;
+    z-index: -1;
 }
 
 .form-grouped label span{
@@ -907,6 +909,7 @@ nav:nth-child(2){
     font-size: .9em;
     transition: .3s
     cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -1;
 }
 
 .form-grouped input:focus+label span{

@@ -152,9 +152,11 @@ const skillbtn = getHTMLs(".skill-btn");
 
 const skillContainer = getHTML(".skill-data");
 
-const darkLayer = getHTML(".dark-layer")
+const darkLayer = getHTML(".dark-layer");
 
-const label = getHTMLs(".form-grouped label")
+const label = getHTMLs(".form-grouped label");
+
+const submitBtn = getHTML(".submit-btn");
 
 
 // event listener
@@ -221,9 +223,15 @@ navbar.forEach((e,i) => {
     })
 })
 
-
 label.forEach(e => {
     e.innerHTML = e.innerHTML
     .split('')
     .map((latter,index) => `<span style = "transition-delay: ${index *30}ms">${latter}</span>`).join("")
 })
+
+const input = getHTMLs(".input-form")
+
+submitBtn.addEventListener("click", ()=>{
+    window.open(`mailto:azzamizzudinhasan@gmail.com?subject=${input[1].value}&body=${input[2].value}`)
+})
+

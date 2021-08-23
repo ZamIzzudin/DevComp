@@ -114,6 +114,7 @@ const label = getHTMLs(".form-grouped label")
 
 const hireBtn = getHTML(".hire-btn")
 
+const submitBtn = getHTML(".submit-btn")
 
 burgerNavbar.addEventListener("touchstart", function(){
     hiddenNavbar.forEach(x => {
@@ -173,7 +174,7 @@ skillbtn.forEach(e => {
 label.forEach(e => {
     e.innerHTML = e.innerHTML
         .split('')
-        .map((latter, index) => `<span style = "transition-delay: ${index * 30}ms">${latter}</span>`).join("")
+        .map((latter, index) => `<span style = "transition-delay: ${index * 30}ms">${latter}</span>`).join("");
 })
 
 hireBtn.addEventListener("click", function () {
@@ -185,3 +186,4 @@ hireBtn.addEventListener("click", function () {
         top: target
     })
 })
+

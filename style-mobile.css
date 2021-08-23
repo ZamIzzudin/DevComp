@@ -569,6 +569,7 @@
         font-size: .9em;
         border-radius: 3px;
         width: 100%;
+        z-index: 1;
     }
 
     .input-form:focus{
@@ -598,6 +599,7 @@
         left: 10px;
         font-family: var(--montserrat);
         font-size: .9em;
+        z-index: -1;
     }
 
     .form-grouped label span{
@@ -605,6 +607,7 @@
         font-size: .9em;
         transition: .3s
         cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: -1;
     }
 
     .form-grouped input:focus+label span{
