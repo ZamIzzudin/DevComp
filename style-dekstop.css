@@ -713,8 +713,7 @@ nav:nth-child(2){
     width: 100%;
     height: 40%;
     margin-bottom: 40px;
-    transition: background-color color .2s;
-    transition: opacity .5s;
+    transition: .3s;
     position: relative;
     padding: 20px;
     color: var(--fontSecondary);
@@ -732,7 +731,7 @@ nav:nth-child(2){
     border: 3px solid var(--primary);
     top: 0;
     left: 0;
-    transition: .2s;
+    transition:.4s;
     z-index: -1;
     box-sizing: border-box;
     opacity: 0;
