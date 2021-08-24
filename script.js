@@ -40,16 +40,6 @@ function whiteNavbar(navbar,navbarLine,socmedLink,socmedLine) {
     socmedLine.style.backgroundColor = "white"
 }
 
-// function navScroll(direction,index){
-//     let target = ((direction.offsetLeft-(166 * index))/3)
-//     window.scroll({
-//         behavior: 'smooth',
-//         left: 0,
-//         top: target
-//     });
-// }
-
-
 function navScroll(direction, index) {
 
     let containerWidth = getComputedStyle(container).width
@@ -145,6 +135,15 @@ function success2(result, index, item, target){
 
 }
 
+function renderItem(e){
+    e.forEach((el,index) => {
+        setTimeout(() => {
+            el.style.opacity = "1" 
+        }, 500 * index);
+        
+    })  
+}
+
 
 function renderSkill(e, length, index){
     return `<div class="data ${length}-kotak${index+1}" >
@@ -185,6 +184,9 @@ const label = getHTMLs(".form-grouped label");
 
 const submitBtn = getHTML(".submit-btn");
 
+const blogThumb = getHTMLs(".blog-thumb");
+
+const projectBox = getHTMLs(".project-box");
 
 // event listener
 
@@ -197,8 +199,10 @@ document.addEventListener("scroll", function(){
             whiteNavbar(navbar, navbarLine, socmedLink, socmedLine);
            if(scrollY > 1000){
                blackNavbar(navbar, navbarLine, socmedLink, socmedLine);
+               renderItem(blogThumb);
                 if(scrollY > 1450 ){
                     whiteNavbar(navbar, navbarLine, socmedLink, socmedLine);
+                    renderItem(projectBox)
                     if(scrollY > 1900){
                         blackNavbar(navbar, navbarLine, socmedLink, socmedLine);
                     }
