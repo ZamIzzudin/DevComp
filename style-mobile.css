@@ -207,7 +207,7 @@
         transform: translateX(-50%);
     }
 
-    .home-content::after{
+    /* .home-content::after{
         display: block;
         content: "";
         min-width: 180px;
@@ -231,7 +231,7 @@
         z-index: 1;
         bottom: 10%;
         right: 40%;
-    }
+    } */
 
     .text-portofolio{
         color: var(--fontPrimary);

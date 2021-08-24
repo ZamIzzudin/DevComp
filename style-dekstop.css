@@ -331,7 +331,7 @@ nav:nth-child(2){
     right: 5%;
 }
 
-.home-content::before{
+/* .home-content::before{
     content: "";
     display: block;
     position: absolute;
@@ -353,7 +353,7 @@ nav:nth-child(2){
     z-index: 5;
     left: 13%;
     bottom: 8%;
-}
+} */
 
 .text-box-name{
     display: inline-block;
