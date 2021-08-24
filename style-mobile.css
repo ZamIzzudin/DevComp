@@ -319,6 +319,7 @@
         line-height: 20px;
         border: 2px solid var(--third);
         padding: 15px;
+        background-color: var(--third);
     }
 
     .about-desc p:nth-child(2){
@@ -329,7 +330,13 @@
         color: var(--blue);
     }
 
-
+    .text-hello{
+        position: absolute;
+        top: 44%;
+        left: 5%; 
+        color: var(--fontSecondary);
+        font-size: 2.5em;
+    }
 
 
     
@@ -481,7 +488,7 @@
         margin-bottom: 5px;
         font-size: 1.5em;
         font-weight: normal;
-        max-height: 35px;
+        max-height: 32px;
         overflow: hidden;
         margin-bottom: 15px;
         position: absolute;
@@ -574,7 +581,7 @@
         right: 10px;
     }
 
-    a .icon{
+    .icon{
         font-size: 1.5em;
         position: absolute;
         bottom: 20px;
@@ -583,8 +590,8 @@
         color: var(--fontSecondary);
     }
 
-    a .icon:last-child{
-        right: 55px;
+    .icon:last-child{
+        right: 60px;
     }
 
 

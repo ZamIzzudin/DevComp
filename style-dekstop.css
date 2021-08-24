@@ -480,6 +480,15 @@ nav:nth-child(2){
     transform: translate(-5%,-5%);
 }
 
+.text-hello{
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    font-family: var(--montserrat);
+    font-size: 5em;
+    color: var(--fontSecondary);
+}
+
 
 
 .skill-content{
