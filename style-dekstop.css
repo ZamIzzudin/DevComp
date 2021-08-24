@@ -230,6 +230,10 @@ nav:nth-child(2){
     background-color: #222325;
     border: none;
     color: var(--purple);
+    text-decoration: none;
+    display: block;
+    line-height: 50px;
+    text-align: center;
 }
 
 .hire-btn span{
@@ -425,7 +429,7 @@ nav:nth-child(2){
 }
 
 .about-desc{
-    color: var(--fontSecondary);
+    color: black;
     width: 45%;
     position: absolute;
     right: 10%;
@@ -435,7 +439,7 @@ nav:nth-child(2){
     font-family: var(--montserrat);
     padding: 20px;
     line-height: 25px;
-    background-color: var(--third);
+    border: 3px solid var(--third);
 }
 
 .about-desc p:nth-child(2) {

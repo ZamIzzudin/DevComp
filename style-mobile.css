@@ -194,7 +194,7 @@
 
     .avatar{
         max-width: 600px;
-        width: 140% ;
+        width: 160% ;
         position: absolute;
         bottom: 0;
         filter: contrast(100%) brightness(30%) saturate(30%) hue-rotate(40deg);
@@ -290,6 +290,7 @@
         align-items: center;
         flex-direction: column;
         padding: 10px;
+        margin: auto;
     }
 
     .about-title{
@@ -306,10 +307,21 @@
     }
 
     .about-desc{
-        text-align: justify;
+        text-align: center;
         font-family: var(--montserrat);
         font-size: .8em;
-        margin-top: 20%;
+        margin-top: 18%;
+        line-height: 20px;
+        border: 2px solid var(--third);
+        padding: 15px;
+    }
+
+    .about-desc p:nth-child(2){
+        margin-top: 20px;
+    }
+
+    .about-desc p span{
+        color: var(--blue);
     }
 
 
@@ -486,7 +498,7 @@
 
     .project-content{
         overflow-y: scroll;
-        max-height: 90%;
+        max-height: 85%;
     }
 
     .project-box{
