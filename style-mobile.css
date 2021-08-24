@@ -320,6 +320,7 @@
         border: 2px solid var(--third);
         padding: 15px;
         background-color: var(--third);
+        position: relative;
     }
 
     .about-desc p:nth-child(2){
@@ -332,8 +333,8 @@
 
     .text-hello{
         position: absolute;
-        top: 44%;
-        left: 5%; 
+        top: -4.5%;
+        left: 4%; 
         color: var(--fontSecondary);
         font-size: 2.5em;
     }
