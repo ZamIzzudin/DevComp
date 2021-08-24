@@ -112,8 +112,6 @@ const skillDesc = getHTML(".skill-desc")
 
 const label = getHTMLs(".form-grouped label")
 
-const hireBtn = getHTML(".hire-btn")
-
 const submitBtn = getHTML(".submit-btn")
 
 burgerNavbar.addEventListener("touchstart", function(){
@@ -124,8 +122,6 @@ burgerNavbar.addEventListener("touchstart", function(){
     lineBurgerNavbar.forEach(b => {
         b.classList.toggle("putar");
     })
-
-    
 })
 
 hiddenNavbar.forEach(e => {
@@ -175,15 +171,5 @@ label.forEach(e => {
     e.innerHTML = e.innerHTML
         .split('')
         .map((latter, index) => `<span style = "transition-delay: ${index * 30}ms">${latter}</span>`).join("");
-})
-
-hireBtn.addEventListener("click", function () {
-    const target = document.getElementById("contact").offsetTop
-
-    window.scroll({
-        behavior: "smooth",
-        left: 0,
-        top: target
-    })
 })
 

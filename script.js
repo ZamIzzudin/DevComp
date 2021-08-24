@@ -263,6 +263,6 @@ label.forEach(e => {
 const input = getHTMLs(".input-form")
 
 submitBtn.addEventListener("click", ()=>{
-    window.open(`mailto:azzamizzudinhasan@gmail.com?subject=${input[1].value}&body=${input[2].value}`)
+    alert("successful sending message")
 })
 
